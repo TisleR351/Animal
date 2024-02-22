@@ -25,4 +25,10 @@ public class Animal {
     public void setCarnivore(boolean carnivore) {
         this.carnivore = carnivore;
     }
+    
+    // Méthode toString pour afficher les caractéristiques de l'animal
+    @Override
+    public String toString() {
+        return "Couleur: " + couleur + ", Est carnivore: " + carnivore;
+    }
 }
