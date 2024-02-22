@@ -46,9 +46,7 @@ public class Chat extends Animal {
 
     // Méthode pour afficher les couleurs du chat
     public void afficherCouleurs() {
-        for (int[] couleur : couleurs) {
-            System.out.println("Couleur (RGB) : " + Arrays.toString(couleur));
-        }
+        for (int[] couleur : couleurs)
     }
 
     // Méthode pour vérifier si le chat est de couleur noir
@@ -57,7 +55,6 @@ public class Chat extends Animal {
             if (couleur[0] != 0 || couleur[1] != 0 || couleur[2] != 0) {
                 return false;
             }
-        }
         return true;
     }
 }
