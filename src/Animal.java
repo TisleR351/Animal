@@ -25,4 +25,16 @@ public class Animal {
     public void setCarnivore(boolean carnivore) {
         this.carnivore = carnivore;
     }
+
+    public boolean isBeautiful() {
+        return this.couleur.equals("Blue");
+    }
+
+    public boolean isVegan() {
+        return !this.carnivore;
+    }
+
+    public String toString() {
+        return "Ceci est un animal";
+    }
 }
