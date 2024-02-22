@@ -1,10 +1,13 @@
 import java.util.Arrays;
+import java.util.List;
+
 public class Chat extends Animal {
 
-    private int[] couleurRGB;
+    private List<int[]> couleurs;
+
     public Chat(String couleur, boolean carnivore) {
         super(couleur, carnivore); // Appel des attributs de la classe père Animal
-        this.couleurRGB = couleurRGB;
+        this.couleurs = couleurs;
     }
 
     public void miauler() {
@@ -30,19 +33,14 @@ public class Chat extends Animal {
     public void setCarnivore(boolean carnivore) {
         super.setCarnivore(carnivore);
     }
-    // Getter du tableau de couleurs RGB
-    public int[] getCouleurRGB() {
-        return couleurRGB;
+    // Getter pour la liste des couleurs
+    public List<int[]> getCouleurs() {
+        return couleurs;
     }
 
-    // Setter du tableau de couleurs RGB
-    public void setCouleurRGB(int[] couleurRGB) {
-        this.couleurRGB = couleurRGB;
+    // Setter pour la liste des couleurs
+    public void setCouleurs(List<int[]> couleurs) {
+        this.couleurs = couleurs;
     }
-
-    // Méthode pour afficher la couleur RGB
-    public void afficherCouleurRGB() {
-        System.out.println("Couleur RGB : " + Arrays.toString(couleurRGB));
-    }
-
 }
+
