@@ -20,7 +20,7 @@ public class Animal {
     // Setters (si nécessaire)
     public void setCouleur(String couleur) {
         this.couleur = couleur;
-
+    }
 
     public void setCarnivore(boolean carnivore) {
         this.carnivore = carnivore;
@@ -30,11 +30,11 @@ public class Animal {
     @Override
     public String toString() {
         return "Couleur: " + couleur + ", Est carnivore: " + carnivore;
-        }
+    }
 
     public boolean isBeautiful() {
         return this.couleur.equals("Blue");
-
+    }
 
     public boolean isVegan() {
         return !this.carnivore;
