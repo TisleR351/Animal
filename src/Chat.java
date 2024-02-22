@@ -5,8 +5,8 @@ public class Chat extends Animal {
 
     private List<int[]> couleurs;
 
-    public Chat(String couleur, boolean carnivore) {
-        super(couleur, carnivore); // Appel des attributs de la classe père Animal
+    public Chat(String couleur, boolean carnivore, List<int[]> couleurs) {
+        super(couleur, carnivore);
         this.couleurs = couleurs;
     }
 
@@ -14,25 +14,26 @@ public class Chat extends Animal {
         System.out.println("Miaou !");
     }
 
-    // Getter de l'attribut couleur
+    // Getter pour l'attribut couleur
     public String getCouleur() {
         return super.getCouleur();
     }
 
-    // Setter de l'attribut couleur
+    // Setter pour l'attribut couleur
     public void setCouleur(String couleur) {
         super.setCouleur(couleur);
     }
 
-    // Getter du booléen Carnivore
+    // Getter pour le booléen Carnivore
     public boolean isCarnivore() {
         return super.isCarnivore();
     }
 
-    // Setter du booléen Carnivore
+    // Setter pour le booléen Carnivore
     public void setCarnivore(boolean carnivore) {
         super.setCarnivore(carnivore);
     }
+
     // Getter pour la liste des couleurs
     public List<int[]> getCouleurs() {
         return couleurs;
@@ -42,5 +43,21 @@ public class Chat extends Animal {
     public void setCouleurs(List<int[]> couleurs) {
         this.couleurs = couleurs;
     }
-}
 
+    // Méthode pour afficher les couleurs du chat
+    public void afficherCouleurs() {
+        for (int[] couleur : couleurs) {
+            System.out.println("Couleur (RGB) : " + Arrays.toString(couleur));
+        }
+    }
+
+    // Méthode pour vérifier si le chat est de couleur noir
+    public boolean estNoir() {
+        for (int[] couleur : couleurs) {
+            if (couleur[0] != 0 || couleur[1] != 0 || couleur[2] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
