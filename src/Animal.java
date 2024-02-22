@@ -31,4 +31,12 @@ public class Animal {
     public String toString() {
         return "Couleur: " + couleur + ", Est carnivore: " + carnivore;
     }
+
+    public boolean isBeautiful() {
+        return this.couleur.equals("Blue");
+    }
+
+    public boolean isVegan() {
+        return !this.carnivore;
+    }
 }
